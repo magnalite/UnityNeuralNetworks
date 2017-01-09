@@ -4,9 +4,9 @@ using System.Collections;
 public class Neuron
 {
 	public double output;
+	public double[] inputWeights;
 
 	private Neuron[] inputNodes;
-	private double[] inputWeights;
 
 	public Neuron (Neuron[] inputs)
 	{

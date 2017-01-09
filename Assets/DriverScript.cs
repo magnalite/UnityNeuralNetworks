@@ -21,6 +21,8 @@ public class DriverScript : MonoBehaviour {
 		rightCast =      new Vector2 (1, 0);
 		network = new NeuralNetwork (5, 1, 2, 2);
 
+		network.putWeights (network.getWeights());
+
 		Physics2D.IgnoreLayerCollision (LayerMask.NameToLayer ("Cars"), LayerMask.NameToLayer ("Cars"));
 	}
 	
@@ -71,11 +73,7 @@ public class DriverScript : MonoBehaviour {
 			GUI.skin = null;
 
 			for (int i = 0; i < network.inputLayer.neurons.Length; i++) {
-				if (i != network.inputLayer.neurons.Length - 1) {
-					GUI.Box (new Rect (10, 40 * i + 20, 200, 20), "Input: " + network.inputLayer.neurons [i].output);
-				} else {
-					GUI.Box (new Rect (10, 40 * i + 20, 200, 20), "Bias: " + network.inputLayer.neurons [i].output);
-				}
+				GUI.Box (new Rect (10, 40 * i + 20, 200, 20), "Input: " + network.inputLayer.neurons [i].output);
 			}
 
 			for (int layer = 0; layer < network.hiddenLayers.Length; layer++) {
