@@ -72,8 +72,8 @@ public class DriverScript : MonoBehaviour {
 		network.inputLayer.neurons[3].output = cast3.distance;
 		network.inputLayer.neurons[4].output = cast4.distance;
 
-		rigidBody.velocity += rigidBody.GetRelativeVector(new Vector2 (0.0f, 0.1f));
-		rigidBody.angularVelocity += ((float) network.outputLayer.neurons [0].CalculateOutput () * 60) - 30;
+		rigidBody.velocity += rigidBody.GetRelativeVector(new Vector2 (0.0f, 0.3f));
+		rigidBody.angularVelocity += ((float) network.outputLayer.neurons [0].CalculateOutput () * 180) - 90;
 	}
 
 	void OnGUI(){

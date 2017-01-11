@@ -7,7 +7,7 @@ using UnityEngine;
 public class GeneticsHandler
 {
 	private static float BREEDING_PERCENTAGE = 0.2f;
-	private static float MUTATION_RATE = 0.3f;
+	private static float MUTATION_RATE = 0.7f;
 	private static float MAX_MUTEX = 0.1f;
 	private static float CROSSOVER_RATE = 0.5f;
 	private static float LIVING_PERCENTAGE = 0.1f;
