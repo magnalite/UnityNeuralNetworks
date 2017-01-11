@@ -6,6 +6,7 @@ public class NeuralNetwork
 	public NeuronLayer inputLayer;
 	public NeuronLayer outputLayer;
 	public NeuronLayer[] hiddenLayers;
+	public double fitness;
 
 	public NeuralNetwork (int inputs, int outputs, int nodesInHiddenLayer, int numHiddenLayers)
 	{
