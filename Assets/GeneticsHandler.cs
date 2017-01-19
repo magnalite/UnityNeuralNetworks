@@ -96,6 +96,20 @@ public class GeneticsHandler
 		return fitness;
 	}
 
+	public static NeuralNetwork getMaxFitnessNetwork(NeuralNetwork[] networks){
+		float fitness = -9999999;
+		NeuralNetwork network = null;
+
+		foreach (NeuralNetwork net in networks) {
+			if (net.fitness > fitness) {
+				fitness = (float) net.fitness;
+				network = net;
+			}
+		}
+
+		return network;
+	}
+
 	public static float getAverageFitness(NeuralNetwork[] networks){
 		float fitness = 0;
 
